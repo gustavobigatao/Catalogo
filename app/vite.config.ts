@@ -3,10 +3,8 @@ const __dirname = import.meta.dirname;
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
-const isGitHubPages = process.env.DEPLOY_TARGET === "gh-pages";
-
 export default defineConfig({
-  base: isGitHubPages ? "/Catalogo_Generico/" : "/",
+  base: "/",
   plugins: [react()],
   server: {
     port: 3000,
